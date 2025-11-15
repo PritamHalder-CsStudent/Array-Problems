@@ -6,7 +6,8 @@
 # basic approach --> O(n^2)
 def subarray_sum_basic(arr,Target):
     for i in range(len(arr)):
-        curr_sum=0
+        curr_sum=0       # In outer loop  declear the curr_sum, because every time when i peak a new element to begining of sub array  then 
+                         # curr_sum will be "0" for new subarray sum . without using it will show error 
         for j in range(i,len(arr)):
             curr_sum+=arr[j]
             if curr_sum == Target:
